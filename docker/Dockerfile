@@ -69,4 +69,9 @@ COPY linters/ /usr/local/bin/
 COPY config/ /tmp/config/
 RUN chmod +x /usr/local/bin/*.sh
 
+# Plugin support
+RUN mkdir -p /usr/local/bin/plugins
+COPY plugins/ /usr/local/bin/plugins/
+RUN find /usr/local/bin/plugins -name "*.sh" -exec chmod +x {} \;
+
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
