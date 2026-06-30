@@ -37,7 +37,8 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./action
+          context: .
+          file: action/Dockerfile
           load: true
           tags: multi-linter:test
           cache-from: type=gha

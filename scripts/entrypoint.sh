@@ -18,6 +18,8 @@ source "$SCRIPT_DIR/detect-files.sh"
 source "$SCRIPT_DIR/plugin-loader.sh"
 # shellcheck source=scripts/config-loader.sh
 source "$SCRIPT_DIR/config-loader.sh"
+# shellcheck source=scripts/metrics.sh
+source "$SCRIPT_DIR/metrics.sh"
 
 cleanup() {
     cleanup_logs
